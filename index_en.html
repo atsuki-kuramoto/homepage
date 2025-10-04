@@ -115,5 +115,15 @@ My supervisor is Professor Masanori Morishita.
   <footer>
     © 2025 Atsuki Kuramoto
   </footer>
+  
+  <script>
+    // ハンバーガーメニュー開閉処理
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
