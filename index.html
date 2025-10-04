@@ -7,25 +7,27 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-L8MLTJNKMX');
 </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>倉本 篤希(Atsuki Kuramoto)のホームページ</title>
   <style>
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
+      line-height: 1.7;
       margin: 0;
       padding: 0;
       background: #fafafa;
       color: #333;
+      font-size: 16px;
     }
+
     header {
       background: #004466;
       color: #fff;
-      padding: 1.5em;
+      padding: 1.5em 1em;
       text-align: center;
     }
     header h1 {
@@ -33,8 +35,21 @@
       font-size: 2em;
     }
     header p {
-      margin: 0.2em 0 0;
+      margin: 0.3em 0 0;
+      font-size: 1em;
     }
+
+    .lang-switch {
+      text-align: right;
+      margin: 0.5em 1em;
+      font-size: 0.9em;
+    }
+    .lang-switch a {
+      margin-left: 0.5em;
+      text-decoration: none;
+      color: #004466;
+    }
+
     nav {
       text-align: center;
       background: #eee;
@@ -45,12 +60,16 @@
       text-decoration: none;
       color: #004466;
       font-weight: bold;
+      display: inline-block;
+      padding: 0.3em 0;
     }
+
     main {
       max-width: 900px;
       margin: 2em auto;
       padding: 0 1em;
     }
+
     section {
       margin-bottom: 2.5em;
     }
@@ -58,25 +77,50 @@
       border-bottom: 2px solid #004466;
       padding-bottom: 0.3em;
       color: #004466;
+      font-size: 1.4em;
     }
+
     footer {
       text-align: center;
       padding: 1em;
       background: #eee;
       font-size: 0.9em;
       color: #555;
+      margin-top: 2em;
     }
-    .lang-switch {
-      text-align: right;
-      margin: 0.5em 1em;
-    }
-    .lang-switch a {
-      margin-left: 0.5em;
-      text-decoration: none;
-      color: #004466;
+
+    /* ===== スマホ対応 (768px以下) ===== */
+    @media (max-width: 768px) {
+      body {
+        font-size: 17px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+      header p {
+        font-size: 0.9em;
+      }
+
+      nav {
+        padding: 0.5em;
+      }
+      nav a {
+        display: block;       /* 縦並び */
+        margin: 0.5em 0;
+      }
+
+      main {
+        margin: 1em auto;
+        padding: 0 1em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
     }
   </style>
-  <link rel=”canonical” href=”https://atsuki-kuramoto.com” >
+  <link rel="canonical" href="https://atsuki-kuramoto.com">
 </head>
 <body>
   <header>
@@ -101,16 +145,14 @@
     <section id="about">
       <h2>自己紹介</h2>
       <p>
-        数論と三次元位相幾何学の類似からお互いの相互発展を促す数論的位相幾何学(Arithmetic Topology)という分野を中心に研究をしています。<br>
+        数論と三次元位相幾何学の類似からお互いの相互発展を促す数論的位相幾何学 (Arithmetic Topology) という分野を中心に研究をしています。<br>
         指導教員は森下昌紀教授です。
       </p>
     </section>
 
     <section id="research">
       <h2>研究紹介</h2>
-      <p>
-        現在の主な研究関心は次の通りです：
-      </p>
+      <p>現在の主な研究関心は次の通りです：</p>
       <ul>
         <li>多重平方剰余記号</li>
         <li>数論的 Dijkgraaf–Witten 不変量，数論的 Chern-Simons 不変量</li>
@@ -121,7 +163,7 @@
     <section id="news">
       <h2>お知らせ</h2>
       <ul>
-        <li>2025年11月14日：Seoul National Universityの整数論セミナーにて講演予定</li>
+        <li>2025年11月14日：Seoul National University の整数論セミナーにて講演予定</li>
         <li>2025年8月：論文 <i>"<a href="https://arxiv.org/abs/2509.00667">On Triple Quadratic Residue Symbols in Real Quadratic Fields</a>"</i> を arXiv に投稿しました</li>
       </ul>
     </section>
