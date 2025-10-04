@@ -25,7 +25,7 @@
     header {
       background: #004466;
       color: #fff;
-      padding: 1.5em;
+      padding: 1.5em 1em;
       text-align: center;
     }
     header h1 {
@@ -33,24 +33,56 @@
       font-size: 2em;
     }
     header p {
-      margin: 0.2em 0 0;
+      margin: 0.3em 0 0;
+      font-size: 1em;
     }
+
+    .lang-switch {
+      text-align: right;
+      margin: 0.5em 1em;
+      font-size: 0.9em;
+    }
+    .lang-switch a {
+      margin-left: 0.5em;
+      text-decoration: none;
+      color: #004466;
+    }
+
     nav {
       text-align: center;
       background: #eee;
       padding: 0.8em;
     }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+    }
     nav a {
-      margin: 0 1em;
       text-decoration: none;
       color: #004466;
       font-weight: bold;
     }
+
+    /* ハンバーガーアイコン */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.8em;
+      background: none;
+      border: none;
+      color: #004466;
+    }
+
     main {
       max-width: 900px;
       margin: 2em auto;
       padding: 0 1em;
     }
+
     section {
       margin-bottom: 2.5em;
     }
@@ -58,26 +90,56 @@
       border-bottom: 2px solid #004466;
       padding-bottom: 0.3em;
       color: #004466;
+      font-size: 1.4em;
     }
-    ul {
-      list-style-type: square;
-      margin-left: 1.5em;
-    }
+
     footer {
       text-align: center;
       padding: 1em;
       background: #eee;
       font-size: 0.9em;
       color: #555;
+      margin-top: 2em;
     }
-    .lang-switch {
-      text-align: right;
-      margin: 0.5em 1em;
-    }
-    .lang-switch a {
-      margin-left: 0.5em;
-      text-decoration: none;
-      color: #004466;
+
+    /* ===== スマホ対応 (768px以下) ===== */
+    @media (max-width: 768px) {
+      body {
+        font-size: 17px;
+      }
+
+      header h1 {
+        font-size: 1.5em;
+      }
+      header p {
+        font-size: 0.9em;
+      }
+      
+      nav {
+        text-align: left;
+        padding: 0.5em 1em;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none; /* 初期状態は非表示 */
+      }
+      nav ul.active {
+        display: flex; /* ボタンを押したら表示 */
+      }
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
+      }
+      
+      main {
+        margin: 1em auto;
+        padding: 0 1em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
     }
   </style>
   <link rel=”canonical” href=” https://atsuki-kuramoto.com” >
