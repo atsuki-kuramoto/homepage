@@ -55,13 +55,28 @@
       background: #eee;
       padding: 0.8em;
     }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+    }
     nav a {
-      margin: 0 1em;
       text-decoration: none;
       color: #004466;
       font-weight: bold;
-      display: inline-block;
-      padding: 0.3em 0;
+    }
+
+    /* ハンバーガーアイコン */
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.8em;
+      background: none;
+      border: none;
+      color: #004466;
     }
 
     main {
@@ -91,32 +106,21 @@
 
     /* ===== スマホ対応 (768px以下) ===== */
     @media (max-width: 768px) {
-      body {
-        font-size: 17px;
-      }
-
-      header h1 {
-        font-size: 1.5em;
-      }
-      header p {
-        font-size: 0.9em;
-      }
-
       nav {
-        padding: 0.5em;
+        text-align: left;
+        padding: 0.5em 1em;
       }
-      nav a {
-        display: block;       /* 縦並び */
-        margin: 0.5em 0;
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        display: none; /* 初期状態は非表示 */
       }
-
-      main {
-        margin: 1em auto;
-        padding: 0 1em;
+      nav ul.active {
+        display: flex; /* ボタンを押したら表示 */
       }
-
-      h2 {
-        font-size: 1.2em;
+      .menu-toggle {
+        display: block;
+        margin-left: auto;
       }
     }
   </style>
@@ -133,12 +137,16 @@
   </div>
 
   <nav>
-    <a href="index.html">ホーム</a>
-    <a href="research.html">研究</a>
-    <a href="publications.html">論文・講演</a>
-    <a href="about.html">経歴</a>
-    <a href="contact.html">連絡先</a>
-    <a href="link.html">リンク</a>
+    <!-- ハンバーガーアイコン -->
+    <button class="menu-toggle" aria-label="メニューを開閉">☰</button>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="research.html">研究</a></li>
+      <li><a href="publications.html">論文・講演</a></li>
+      <li><a href="about.html">経歴</a></li>
+      <li><a href="contact.html">連絡先</a></li>
+      <li><a href="link.html">リンク</a></li>
+    </ul>
   </nav>
 
   <main>
@@ -172,5 +180,15 @@
   <footer>
     © 2025 Atsuki Kuramoto
   </footer>
+
+  <script>
+    // ハンバーガーメニュー開閉処理
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('nav ul');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
