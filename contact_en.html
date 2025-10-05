@@ -1,152 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L8MLTJNKMX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-L8MLTJNKMX');
-</script>
-  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8MLTJNKMX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-L8MLTJNKMX');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Atsuki Kuramoto's website</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-      background: #fafafa;
-      color: #333;
-      font-size: 16px;
-    }
-
-    header {
-      background: #004466;
-      color: #fff;
-      padding: 1.5em 1em;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-    header p {
-      margin: 0.3em 0 0;
-      font-size: 1em;
-    }
-
-    .lang-switch {
-      text-align: right;
-      margin: 0.5em 1em;
-      font-size: 0.9em;
-    }
-    .lang-switch a {
-      margin-left: 0.5em;
-      text-decoration: none;
-      color: #004466;
-    }
-
-    nav {
-      text-align: center;
-      background: #eee;
-      padding: 0.8em;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 1.5em;
-    }
-    nav a {
-      text-decoration: none;
-      color: #004466;
-      font-weight: bold;
-    }
-
-    /* ハンバーガーアイコン */
-    .menu-toggle {
-      display: none;
-      cursor: pointer;
-      font-size: 1.8em;
-      background: none;
-      border: none;
-      color: #004466;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2em auto;
-      padding: 0 1em;
-    }
-
-    section {
-      margin-bottom: 2.5em;
-    }
-    h2 {
-      border-bottom: 2px solid #004466;
-      padding-bottom: 0.3em;
-      color: #004466;
-      font-size: 1.4em;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1em;
-      background: #eee;
-      font-size: 0.9em;
-      color: #555;
-      margin-top: 2em;
-    }
-
-    /* ===== スマホ対応 (768px以下) ===== */
-    @media (max-width: 768px) {
-      body {
-        font-size: 17px;
-      }
-
-      header h1 {
-        font-size: 1.5em;
-      }
-      header p {
-        font-size: 0.9em;
-      }
-      
-      nav {
-        text-align: left;
-        padding: 0.5em 1em;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        display: none; /* 初期状態は非表示 */
-      }
-      nav ul.active {
-        display: flex; /* ボタンを押したら表示 */
-      }
-      .menu-toggle {
-        display: block;
-        margin-left: auto;
-      }
-      
-      main {
-        margin: 1em auto;
-        padding: 0 1em;
-      }
-
-      h2 {
-        font-size: 1.2em;
-      }
-    }
-  </style>
-
-  <link rel=”canonical” href=”https://atsuki-kuramoto.com/index_en.html” >
+  <link href="style.css" rel="stylesheet">
+  <link rel="canonical" href="https://atsuki-kuramoto.com">
 </head>
+
 <body>
   <header>
     <h1>Contact</h1>
@@ -158,21 +29,21 @@
   </div>
 
   <nav>
-  <!-- ハンバーガーアイコン -->
-  <button class="menu-toggle" aria-label="メニューを開閉">☰</button>
-  <ul>
-    <li><a href="index_en.html">Home</a></li>
-    <li><a href="publications_en.html">Papers and Presentations</a></li>
-    <li><a href="contact_en.html">Contact</a></li>
-    <li><a href="link_en.html">Links</a></li>
-  </ul>
+    <!-- ハンバーガーアイコン -->
+    <button class="menu-toggle" aria-label="メニューを開閉">☰</button>
+    <ul>
+      <li><a href="index_en.html">Home</a></li>
+      <li><a href="publications_en.html">Papers and Presentations</a></li>
+      <li><a href="contact_en.html">Contact</a></li>
+      <li><a href="link_en.html">Links</a></li>
+    </ul>
   </nav>
-  
+
   <main>
     <section>
       <h2>Email</h2>
-        <p>kuramoto.atsuki.257 [at] s.kyushu-u.ac.jp</p>
-        <p>kuramoto.atsuki.2358 [at] gmail.com</p>
+      <p>kuramoto.atsuki.257 [at] s.kyushu-u.ac.jp</p>
+      <p>kuramoto.atsuki.2358 [at] gmail.com</p>
     </section>
 
     <section>
@@ -196,7 +67,7 @@
   <footer>
     © 2025 Atsuki Kuramoto
   </footer>
-  
+
   <script>
     // ハンバーガーメニュー開閉処理
     const toggleBtn = document.querySelector('.menu-toggle');
@@ -207,4 +78,5 @@
     });
   </script>
 </body>
+
 </html>
